@@ -1,0 +1,13 @@
+diff --git a/drivers/acpi/ec.c b/drivers/acpi/ec.c
+index a362f20..220d640 100644
+--- a/drivers/acpi/ec.c
++++ b/drivers/acpi/ec.c
+@@ -1147,6 +1147,9 @@ static int acpi_ec_add(struct acpi_device *device)
+ 
+ 	ret = ec_install_handlers(ec);
+ 
++	/* Reprobe devices depending on the EC */
++	acpi_walk_dep_device_list(ec->handle);
++
+ 	/* EC is fully operational, allow queries */
+ 	clear_bit(EC_FLAGS_QUERY_PENDING, &ec->flags);
