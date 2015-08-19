@@ -1,6 +1,8 @@
 # Surface Pro 3 Linux Kernel 3.19.0-27.29
 
 This is a custom kernel for the Surface Pro 3.
+The kernel used was 3.19.0-27.29 but the files are named 3.19.0-27.31. This is solely for the purpose of avoiding the kernele being overwritten by a software update
+
 The Kernel includes the patches from 
 https://github.com/matthewwardrop/linux-surfacepro3.git
 https://github.com/neoreeps/surface-pro-3
